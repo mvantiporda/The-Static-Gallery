@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Static Gallery</title>
+  <meta name="description" content="Apply to be hosted at The Static Gallery: share your details, bio and sample works.">
+  <meta name="theme-color" content="#ededed">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23c2b19c'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23000' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="curtain" aria-hidden="true"><span>The Static Gallery</span></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <a class="brand" href="index.html">The Static Gallery</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav site-nav"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link active" href="about.html" aria-current="page">About</a></li><li class="nav-item"><a class="nav-link" href="exhibition.html">Current Exhibition</a></li><li class="nav-item"><a class="nav-link" href="artists.html">Artists Directory</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li></ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <a class="back-link" href="about.html"><span>&larr;</span> Back to About</a>
+      <h1 class="page-title apply-title">Get Involved &nbsp;/ Submit Your Work</h1>
+      <form id="apply-form" class="apply" novalidate data-mailto="staticgalleryproject@gmail.com" data-endpoint="">
+        <div class="apply-col">
+          <div class="field">
+            <label for="a-name">Full Name</label>
+            <input id="a-name" name="name" type="text" placeholder="Enter text..." autocomplete="name" required>
+            <span class="err">Enter your full name.</span>
+          </div>
+          <div class="field">
+            <label for="a-link">Portfolio / Social Media Link (Instagram, Behance, Drive)</label>
+            <input id="a-link" name="portfolio" type="text" inputmode="url" placeholder="Enter text..." required>
+            <span class="err">Enter a link, like instagram.com/yourname.</span>
+          </div>
+          <div class="field">
+            <label for="a-bio">Artist Bio</label>
+            <textarea id="a-bio" name="bio" rows="4" placeholder="Enter text..." required></textarea>
+            <span class="err">Add a short bio.</span>
+          </div>
+        </div>
+        <div class="apply-col apply-col-mid">
+          <div class="field">
+            <label for="a-email">Email Address</label>
+            <input id="a-email" name="email" type="email" placeholder="Email input" autocomplete="email" required>
+            <span class="err">Enter a valid email address, like name@example.com.</span>
+          </div>
+          <div class="field field-grow">
+            <label for="a-statement">Artist Bio / Statement</label>
+            <textarea id="a-statement" name="statement" rows="9" placeholder="Enter text..." required></textarea>
+            <span class="err">Add your artist statement.</span>
+          </div>
+        </div>
+        <div class="apply-col">
+          <div class="field field-grow">
+            <span class="label" id="drop-label">Upload Sample Works</span>
+            <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-labelledby="drop-label" aria-describedby="drop-help">
+              <p id="drop-help"><strong>Image</strong><br>Upload dropzone<br>(JPG, PNG, PDF)<br><em>Drag files here or tap to choose</em></p>
+              <input id="a-files" name="files" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf" multiple hidden>
+            </div>
+            <ul class="file-list" id="file-list" aria-live="polite"></ul>
+            <span class="err" id="file-err"></span>
+          </div>
+        </div>
+        <div class="apply-actions"><button class="btn-pill" type="submit">Submit Application</button></div>
+        <p class="form-note" id="apply-note" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <span><em>Email:</em> <a href="mailto:staticgalleryproject@gmail.com">staticgalleryproject@gmail.com</a></span>
+      <span><em>Location:</em> AM21 Studio Lab, Metro Manila</span>
+      <span><em>Hours:</em> Mon - Fri // 09:00 - 18:00</span>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
